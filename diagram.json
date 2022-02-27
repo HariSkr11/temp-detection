@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Hari S",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 49.75, "left": -42.41, "attrs": {} },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": 258.18,
+      "left": -53.77,
+      "attrs": {}
+    },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -90.55, "left": 35.18, "attrs": {} }
+  ],
+  "connections": [
+    [ "lcd1:VSS", "uno:GND.1", "green", [ "v0" ] ],
+    [ "lcd1:VDD", "uno:5V", "green", [ "v46.73", "h103.2", "v256.74", "h-128.63" ] ],
+    [ "lcd1:RS", "uno:12", "green", [ "v0" ] ],
+    [ "lcd1:E", "uno:11", "green", [ "v0" ] ],
+    [ "lcd1:D4", "uno:5", "green", [ "v0" ] ],
+    [ "lcd1:D5", "uno:4", "green", [ "v0" ] ],
+    [ "lcd1:D6", "uno:3", "green", [ "v0" ] ],
+    [ "lcd1:D7", "uno:2", "green", [ "v0" ] ],
+    [ "ntc1:GND", "uno:GND.3", "black", [ "h0" ] ],
+    [ "ntc1:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "ntc1:OUT", "uno:A0", "green", [ "h0" ] ]
+  ]
+}
